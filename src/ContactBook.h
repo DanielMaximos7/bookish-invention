@@ -16,7 +16,7 @@ class ContactBook{
         void addContact(const Contact& contact);
         std::vector<Contact> listContacts() const;
         std::vector<Contact> searchContacts(const std::string& keword) const;
-
+        
         bool deleteContactById(int id);
         bool deleteContactByName(const std::string& name);
         

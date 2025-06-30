@@ -18,6 +18,36 @@ data.clear();                           // Can clear it too
 The const at the end = "this function is read-only and won't change 
 the Contact object" The return type = "gives you a modifiable copy of a string"
 */
+// Accessors
+int Contact::getId() const {
+    return _id;
+}
+
+const std::string& Contact::getName() const {
+    return name_;
+}
+
+const std::string& Contact::getPhone() const {
+    return phone_;
+}
+
+const std::string& Contact::getEmail() const {
+    return email_;
+}
+
+// Mutators
+void Contact::setName(const std::string& name) {
+    name_ = name;
+}
+
+void Contact::setPhone(const std::string& phone) {
+    phone_ = phone;
+}
+
+void Contact::setEmail(const std::string& email) {
+    email_ = email;
+}
+
 std::string Contact::serialize() const{
     std::ostringstream oss;
     oss << _id << "," << name_ << "," << phone_ << "," << email_;
